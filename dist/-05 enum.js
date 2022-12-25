@@ -16,3 +16,11 @@ function checkDoorState(state) {
 }
 checkDoorState(DoorState.open);
 checkDoorState(DoorState.closed);
+// string enum
+var DoorStateString;
+(function (DoorStateString) {
+    DoorStateString["OPEN"] = "Open";
+    DoorStateString["CLOSED"] = "closed";
+})(DoorStateString || (DoorStateString = {}));
+console.log("OPEN = ".concat(DoorStateString.OPEN));
+console.log("const closed = ".concat(12 /* Open */));
