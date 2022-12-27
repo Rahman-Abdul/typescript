@@ -1,6 +1,7 @@
 // JavaScript
 
 let myFirstName = "Rahman"
+const mySecondName = "Ahmed"
 
 // Typescript
 
