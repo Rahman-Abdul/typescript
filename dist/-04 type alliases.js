@@ -1,2 +1,3 @@
-function addNumberWithString() {
+function addNumberWithString(a) {
 }
+addNumberWithString(3);
