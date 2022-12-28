@@ -30,3 +30,8 @@ var namObj = { id: 3, name: "rahman" };
 var petObj = { id: 4, house: "Housing" };
 var areaObj = __assign(__assign({}, namObj), petObj);
 console.log("secondObj: ".concat(JSON.stringify(areaObj)));
+// Spread precedence
+var obj1 = { id: 1, name: "cat", town: "owo" };
+var obj2 = { id: 1, name: "hen" };
+var obj3 = __assign(__assign({}, obj1), obj2);
+console.log("secondObj: ".concat(JSON.stringify(obj3)));

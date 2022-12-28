@@ -26,3 +26,14 @@ let petObj: object = {id: 4, house: "Housing"};
 let areaObj: object = {...namObj, ...petObj};
 
 console.log(`secondObj: ${JSON.stringify(areaObj)}`);
+
+
+
+// Spread precedence
+
+let obj1: object = {id: 1, name: "cat", town: "owo"};
+let obj2: object = {id: 1, name: "hen"};
+let obj3: object = {...obj1, ...obj2};
+
+console.log(`secondObj: ${JSON.stringify(obj3)}`);
+
