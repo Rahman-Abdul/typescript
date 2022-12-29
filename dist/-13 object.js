@@ -35,3 +35,18 @@ var obj1 = { id: 1, name: "cat", town: "owo" };
 var obj2 = { id: 1, name: "hen" };
 var obj3 = __assign(__assign({}, obj1), obj2);
 console.log("secondObj: ".concat(JSON.stringify(obj3)));
+// Object desctructuring
+var complexOBject = {
+    aNum: 1,
+    bStr: "name",
+    cBool: true
+};
+var aNum = complexOBject.aNum, bStr = complexOBject.bStr, cBool = complexOBject.cBool;
+console.log("aNum : ".concat(aNum));
+console.log("bstr ; ".concat(bStr));
+console.log("cBool : ".concat(cBool));
+// Change Object Name
+var objId = complexOBject.aNum, objName = complexOBject.bStr, isValid = complexOBject.cBool;
+console.log("ojId : ".concat(objId));
+console.log("objName : ".concat(objName));
+console.log("isValid : ".concat(isValid));

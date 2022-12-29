@@ -37,3 +37,29 @@ let obj3: object = {...obj1, ...obj2};
 
 console.log(`secondObj: ${JSON.stringify(obj3)}`);
 
+// Object desctructuring
+
+let complexOBject = {
+    aNum: 1,
+    bStr: "name",
+    cBool: true
+}
+
+let {aNum, bStr, cBool} = complexOBject;
+console.log(`aNum : ${aNum}`);
+console.log(`bstr ; ${bStr}`);
+console.log(`cBool : ${cBool}`);
+
+// Change Object Name
+
+let {aNum: objId, bStr: objName, cBool: isValid} = complexOBject;
+console.log(`ojId : ${objId}`);
+console.log(`objName : ${objName}`);
+console.log(`isValid : ${isValid}`);
+
+
+
+
+
+
+
