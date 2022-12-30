@@ -49,7 +49,7 @@ testArgument(10, 20)
 
 // Callback
 
-
+/*
 var myCallback = function (text){
     console.log("myCallback called with:" + text);
 
@@ -62,3 +62,23 @@ function withCallbackArg(message, callbackfn){
 }
 
 withCallbackArg("initial text", myCallback)
+
+withCallbackArg("text", "this is not a function");
+*/
+
+// Function signatures as parameters
+
+function myCallback(text: string): void{
+    console.log(`myCallback called with ${text}`);
+
+}
+
+function withCallbackArg(message: string, callbackfn: (text: string) => void){
+    console.log("withCallback called, message: " + message);
+    callbackfn(`${message}  from withcallback`);
+
+}
+
+withCallbackArg("initial text", myCallback)
+
+//withCallbackArg("text", "this is not a function");
