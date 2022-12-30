@@ -46,3 +46,19 @@ function testArgument(...args: string[] | number[]){
 }
 testArgument(1, 2)
 testArgument(10, 20)
+
+// Callback
+
+
+var myCallback = function (text){
+    console.log("myCallback called with:" + text);
+
+}
+
+function withCallbackArg(message, callbackfn){
+    console.log("withCallback called, message: " + message);
+    callbackfn(message + "from withcallback");
+
+}
+
+withCallbackArg("initial text", myCallback)
