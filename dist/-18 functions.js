@@ -63,4 +63,9 @@ function withCallbackArg(message, callbackfn) {
     callbackfn("".concat(message, "  from withcallback"));
 }
 withCallbackArg("initial text", myCallback);
-//withCallbackArg("text", "this is not a function");
+function add(a, b) {
+    return a + b;
+}
+add("first", "second");
+add(1, 2);
+//add(true, false);
