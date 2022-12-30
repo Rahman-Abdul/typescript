@@ -68,4 +68,11 @@ function add(a, b) {
 }
 add("first", "second");
 add(1, 2);
-//add(true, false);
+function withliterals(input) {
+    console.log("callled with ".concat(input));
+}
+withliterals("one");
+withliterals("three");
+withliterals(3676);
+//withliterals("four");
+//withliterals(2);
