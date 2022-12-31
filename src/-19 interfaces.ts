@@ -71,3 +71,30 @@ name: "name value"});
 
 printNameOrValue({descr: "2",
     value: 2});
+
+    interface IPerson {
+        id: number;
+        name: string;
+    }
+
+type personPropertyName = keyof IPerson;
+
+type personPropertyLiteral = "id" | "name";
+
+function getProperty(key: personPropertyName, value: IPerson){
+    console.log(`${key} = ${value[key]}`);
+
+}
+
+getProperty("id",{
+    id:1, name: "first name"
+});
+
+getProperty("name",{
+    id:2, name: "second name"
+});
+
+/* getProperty("telephone",{
+    id:1, name: "first name"
+});
+*/

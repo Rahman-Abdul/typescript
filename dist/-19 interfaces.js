@@ -22,3 +22,16 @@ printNameOrValue({ id: 1,
     name: "name value" });
 printNameOrValue({ descr: "2",
     value: 2 });
+function getProperty(key, value) {
+    console.log("".concat(key, " = ").concat(value[key]));
+}
+getProperty("id", {
+    id: 1, name: "first name"
+});
+getProperty("name", {
+    id: 2, name: "second name"
+});
+/* getProperty("telephone",{
+    id:1, name: "first name"
+});
+*/
