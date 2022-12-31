@@ -10,3 +10,8 @@ var optionalName = {
     id: 4,
     name: "optional name"
 };
+/*
+let weakTypeNoOverlap: IweakType = {
+    description: "a description";
+}
+*/

@@ -27,3 +27,17 @@ let optionalName: IOptional = {
     name: "optional name"
 
 }
+
+// Weak types
+
+interface IweakType {
+    id?: number;
+    name?: string;
+}
+
+/*
+let weakTypeNoOverlap: IweakType = {
+    description: "a description";
+}
+*/
+
