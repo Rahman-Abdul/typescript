@@ -10,3 +10,20 @@ let idobject: IIdName = {
     name: "this is a nme"
 }
 
+// Optional Properties
+
+interface IOptional {
+    id: number;
+    name?: string;
+}
+
+let optionalId: IOptional = {
+    id: 4
+
+}
+
+let optionalName: IOptional = {
+    id: 4,
+    name: "optional name"
+
+}
