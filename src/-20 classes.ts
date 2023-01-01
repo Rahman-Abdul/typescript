@@ -46,3 +46,20 @@ class ClassC {
 
 let classC = new ClassC();
 printClass(classC)
+
+// Class Constructor
+
+class ClassWithConstructor{
+    id: number;
+    constructor(_id: number){
+        this.id = _id
+    }
+}
+
+let classWithConstructor = new ClassWithConstructor(23);
+//
+
+console.log(`classWithCOnstructor = ${JSON.stringify(classWithConstructor)}`);
+
+
+

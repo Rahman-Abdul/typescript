@@ -45,3 +45,13 @@ var ClassC = /** @class */ (function () {
 }());
 var classC = new ClassC();
 printClass(classC);
+// Class Constructor
+var ClassWithConstructor = /** @class */ (function () {
+    function ClassWithConstructor(_id) {
+        this.id = _id;
+    }
+    return ClassWithConstructor;
+}());
+var classWithConstructor = new ClassWithConstructor(23);
+//
+console.log("classWithCOnstructor = ".concat(JSON.stringify(classWithConstructor)));
