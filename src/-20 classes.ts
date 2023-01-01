@@ -36,3 +36,13 @@ let classB = new ClassB();
 
 printClass(classA);
 printClass(classB);
+
+class ClassC {
+    print(): void {
+        console.log(`ClassC.print() Called. `);
+
+    };
+}
+
+let classC = new ClassC();
+printClass(classC)

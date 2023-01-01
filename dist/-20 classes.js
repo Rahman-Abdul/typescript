@@ -34,3 +34,14 @@ var classA = new ClassA();
 var classB = new ClassB();
 printClass(classA);
 printClass(classB);
+var ClassC = /** @class */ (function () {
+    function ClassC() {
+    }
+    ClassC.prototype.print = function () {
+        console.log("ClassC.print() Called. ");
+    };
+    ;
+    return ClassC;
+}());
+var classC = new ClassC();
+printClass(classC);
