@@ -62,4 +62,17 @@ let classWithConstructor = new ClassWithConstructor(23);
 console.log(`classWithCOnstructor = ${JSON.stringify(classWithConstructor)}`);
 
 
+// Class Modifiers: Public
+class ClasswithPublicProperty {
+    public id: number | undefined;
+
+}
+
+let publiAccess = new  ClasswithPublicProperty();
+publiAccess.id = 20;
+
+
+// Private Modifiers
+
+
 

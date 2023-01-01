@@ -55,3 +55,12 @@ var ClassWithConstructor = /** @class */ (function () {
 var classWithConstructor = new ClassWithConstructor(23);
 //
 console.log("classWithCOnstructor = ".concat(JSON.stringify(classWithConstructor)));
+// Class Modifiers: Public
+var ClasswithPublicProperty = /** @class */ (function () {
+    function ClasswithPublicProperty() {
+    }
+    return ClasswithPublicProperty;
+}());
+var publiAccess = new ClasswithPublicProperty();
+publiAccess.id = 20;
+// Private Modifiers
