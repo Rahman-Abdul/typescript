@@ -110,7 +110,7 @@ class ClassWithReadonly {
 
 class ClassWithAccessors {
     private _id: number;
-    get id() {
+    get id () {
         console.log('get id property');
         return this.id
 

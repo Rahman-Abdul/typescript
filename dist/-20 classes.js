@@ -91,3 +91,23 @@ var ClassWithReadonly = /** @class */ (function () {
     }
     return ClassWithReadonly;
 }());
+var ClassWithAccessors = /** @class */ (function () {
+    function ClassWithAccessors() {
+    }
+    Object.defineProperty(ClassWithAccessors.prototype, "id", {
+        get: function () {
+            console.log('get id property');
+            return this.id;
+        },
+        set: function (value) {
+            console.log('set id property');
+            this._id = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return ClassWithAccessors;
+}());
+var classWithAccessors = new ClassWithAccessors();
+classWithAccessors.id = 10;
+console.log("classWithAccessors.id = ".concat(classWithAccessors.id));
