@@ -95,5 +95,18 @@ let myClassconst = new ClassWithConst(1, "test");
 console.log(`myclassconst.id = ${myClassconst.id}`);
 //console.log(`myClassconst.name = ${myClassconst.name}`);
 
+// Read Only
+
+class ClassWithReadonly {
+    readonly name: string;
+    constructor(_name: string){
+        this.name = _name;
+    }
+    /*
+    setNameValue(_name: string){
+        this.name = _name    }
+        */
+}
+
 
 

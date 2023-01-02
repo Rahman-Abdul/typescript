@@ -84,3 +84,10 @@ var ClassWithConst = /** @class */ (function () {
 var myClassconst = new ClassWithConst(1, "test");
 console.log("myclassconst.id = ".concat(myClassconst.id));
 //console.log(`myClassconst.name = ${myClassconst.name}`);
+// Read Only
+var ClassWithReadonly = /** @class */ (function () {
+    function ClassWithReadonly(_name) {
+        this.name = _name;
+    }
+    return ClassWithReadonly;
+}());
