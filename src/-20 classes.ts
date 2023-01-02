@@ -108,5 +108,23 @@ class ClassWithReadonly {
         */
 }
 
+class ClassWithAccessors {
+    private _id: number;
+    get id() {
+        console.log('get id property');
+        return this.id
+
+    }
+    set id(value: number){
+        console.log('set id property');
+        this._id = value;
+    }
+}
+
+let classWithAccessors = new ClassWithAccessors();
+classWithAccessors.id = 10;
+console.log(`classWithAccessors.id = ${classWithAccessors.id}`);
+
+
 
 
