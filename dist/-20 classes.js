@@ -61,6 +61,26 @@ var ClasswithPublicProperty = /** @class */ (function () {
     }
     return ClasswithPublicProperty;
 }());
-var publiAccess = new ClasswithPublicProperty();
-publiAccess.id = 20;
+var publicAccess = new ClasswithPublicProperty();
+publicAccess.id = 20;
 // Private Modifiers
+/*
+class ClasswithPrivateProperty {
+    private id: number | undefined;
+
+}
+
+let privateAccess = new  ClasswithPrivateProperty();
+privateAccess.id = 20;
+
+*/
+var ClassWithConst = /** @class */ (function () {
+    function ClassWithConst(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    return ClassWithConst;
+}());
+var myClassconst = new ClassWithConst(1, "test");
+console.log("myclassconst.id = ".concat(myClassconst.id));
+//console.log(`myClassconst.name = ${myClassconst.name}`);

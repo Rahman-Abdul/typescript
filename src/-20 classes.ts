@@ -68,11 +68,32 @@ class ClasswithPublicProperty {
 
 }
 
-let publiAccess = new  ClasswithPublicProperty();
-publiAccess.id = 20;
+let publicAccess = new  ClasswithPublicProperty();
+publicAccess.id = 20;
 
 
 // Private Modifiers
+
+/*
+class ClasswithPrivateProperty {
+    private id: number | undefined;
+
+}
+
+let privateAccess = new  ClasswithPrivateProperty();
+privateAccess.id = 20;
+
+*/
+
+class ClassWithConst {
+constructor(public id:number, private name: string){
+
+}
+}
+
+let myClassconst = new ClassWithConst(1, "test");
+console.log(`myclassconst.id = ${myClassconst.id}`);
+//console.log(`myClassconst.name = ${myClassconst.name}`);
 
 
 
