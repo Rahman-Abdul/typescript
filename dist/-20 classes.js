@@ -111,3 +111,29 @@ var ClassWithAccessors = /** @class */ (function () {
 var classWithAccessors = new ClassWithAccessors();
 classWithAccessors.id = 10;
 console.log("classWithAccessors.id = ".concat(classWithAccessors.id));
+// static Functions
+var StaticFunction = /** @class */ (function () {
+    function StaticFunction() {
+    }
+    StaticFunction.printTwo = function () {
+        console.log('2');
+    };
+    return StaticFunction;
+}());
+StaticFunction.printTwo();
+// static Properties
+var StaticProperty = /** @class */ (function () {
+    function StaticProperty() {
+    }
+    StaticProperty.prototype.updateCount = function () {
+        StaticProperty.count++;
+    };
+    StaticProperty.count = 0;
+    return StaticProperty;
+}());
+var firstinstance = new StaticProperty();
+var secondinstance = new StaticProperty();
+firstinstance.updateCount();
+console.log("staticproperty.count = ".concat(StaticProperty.count));
+secondinstance.updateCount();
+console.log("staticproperty.count = ".concat(StaticProperty.count));

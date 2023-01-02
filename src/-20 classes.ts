@@ -125,6 +125,36 @@ let classWithAccessors = new ClassWithAccessors();
 classWithAccessors.id = 10;
 console.log(`classWithAccessors.id = ${classWithAccessors.id}`);
 
+// static Functions
+
+class StaticFunction {
+    static printTwo() {
+
+        console.log('2');
+
+    }
+}
+ StaticFunction.printTwo();
+
+ // static Properties
+
+ class StaticProperty {
+    static count = 0;
+    updateCount(){
+        StaticProperty.count++;
+    }
+ }
+
+ let firstinstance = new StaticProperty();
+ let secondinstance = new StaticProperty();
+
+ firstinstance.updateCount();
+console.log(`staticproperty.count = ${StaticProperty.count}`);
+
+secondinstance.updateCount();
+console.log(`staticproperty.count = ${StaticProperty.count}`);
+
+
 
 
 
