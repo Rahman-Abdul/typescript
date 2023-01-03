@@ -148,11 +148,23 @@ class StaticFunction {
  let firstinstance = new StaticProperty();
  let secondinstance = new StaticProperty();
 
- firstinstance.updateCount();
+firstinstance.updateCount();
 console.log(`staticproperty.count = ${StaticProperty.count}`);
 
 secondinstance.updateCount();
 console.log(`staticproperty.count = ${StaticProperty.count}`);
+
+// Namespaces
+
+namespace FirstNameSpace {
+    export class NameSpaceClass {}
+    class NotExported { }
+}
+
+let nameSpaceClass = new FirstNameSpace.NameSpaceClass();
+//let notExported = new FirstNameSpace.NotExported();
+
+
 
 
 

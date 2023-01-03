@@ -137,3 +137,20 @@ firstinstance.updateCount();
 console.log("staticproperty.count = ".concat(StaticProperty.count));
 secondinstance.updateCount();
 console.log("staticproperty.count = ".concat(StaticProperty.count));
+// Namespaces
+var FirstNameSpace;
+(function (FirstNameSpace) {
+    var NameSpaceClass = /** @class */ (function () {
+        function NameSpaceClass() {
+        }
+        return NameSpaceClass;
+    }());
+    FirstNameSpace.NameSpaceClass = NameSpaceClass;
+    var NotExported = /** @class */ (function () {
+        function NotExported() {
+        }
+        return NotExported;
+    }());
+})(FirstNameSpace || (FirstNameSpace = {}));
+var nameSpaceClass = new FirstNameSpace.NameSpaceClass();
+//let notExported = new FirstNameSpace.NotExported();
