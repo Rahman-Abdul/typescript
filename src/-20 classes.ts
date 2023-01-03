@@ -164,6 +164,24 @@ namespace FirstNameSpace {
 let nameSpaceClass = new FirstNameSpace.NameSpaceClass();
 //let notExported = new FirstNameSpace.NotExported();
 
+// Class Inheritance
+
+interface Ibase {
+    id: number;
+}
+
+interface IDeriveBase  extends Ibase {
+    name: string;
+}
+
+class BaseClass implements Ibase {
+    id: number = 0;
+}
+
+class DeriveFromBaseClass  extends BaseClass implements IDeriveBase {
+    name: string = "name string"
+
+}
 
 
 
