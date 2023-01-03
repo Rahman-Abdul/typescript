@@ -183,8 +183,20 @@ class DeriveFromBaseClass  extends BaseClass implements IDeriveBase {
 
 }
 
+// Multiple Class Inheritance Interface
 
+interface IFirstInterface {
+    id: number;
+}
 
+interface ISecondInterface {
+    name: string;
+}
+
+class MultippleInterfaces implements IFirstInterface, ISecondInterface{
+    id: number = 0;
+    name: string = "name string"
+}
 
 
 

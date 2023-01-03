@@ -183,3 +183,10 @@ var DeriveFromBaseClass = /** @class */ (function (_super) {
     }
     return DeriveFromBaseClass;
 }(BaseClass));
+var MultippleInterfaces = /** @class */ (function () {
+    function MultippleInterfaces() {
+        this.id = 0;
+        this.name = "name string";
+    }
+    return MultippleInterfaces;
+}());
