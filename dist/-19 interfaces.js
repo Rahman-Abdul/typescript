@@ -38,4 +38,8 @@ var DeriveBaseClass = /** @class */ (function () {
     }
     return DeriveBaseClass;
 }());
-// Multiple Inheritance interfaces
+var multipleObject = {
+    id: 1,
+    name: " my name",
+    description: "my description"
+};

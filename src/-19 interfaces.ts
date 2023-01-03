@@ -112,8 +112,26 @@ interface IDeriveBase  extends Ibase {
 class DeriveBaseClass implements IDeriveBase {
     id: number = 2;
     name: string = "Name string"
+
+
 }
 
 // Multiple Inheritance interfaces
 
+interface IbaseStringOrNumeber {
+    id: number | string;
+}
+
+interface IDeriveFromBaseNumaber extends IbaseStringOrNumeber {
+    name: string;
+}
+interface Imultiple extends IDeriveFromBaseNumaber, IbaseStringOrNumeber {
+    description: string;
+}
+
+let multipleObject: Imultiple = {
+    id: 1,
+    name: " my name",
+    description: "my description"
+}
 
