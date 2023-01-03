@@ -98,3 +98,22 @@ getProperty("name",{
     id:1, name: "first name"
 });
 */
+
+// Inheritance
+
+interface Ibase {
+    id: number;
+}
+
+interface IDeriveBase  extends Ibase {
+    name: string;
+}
+
+class DeriveBaseClass implements IDeriveBase {
+    id: number = 2;
+    name: string = "Name string"
+}
+
+// Multiple Inheritance interfaces
+
+

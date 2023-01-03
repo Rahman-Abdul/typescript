@@ -31,7 +31,11 @@ getProperty("id", {
 getProperty("name", {
     id: 2, name: "second name"
 });
-/* getProperty("telephone",{
-    id:1, name: "first name"
-});
-*/
+var DeriveBaseClass = /** @class */ (function () {
+    function DeriveBaseClass() {
+        this.id = 2;
+        this.name = "Name string";
+    }
+    return DeriveBaseClass;
+}());
+// Multiple Inheritance interfaces
