@@ -242,3 +242,27 @@ class DerivedClassfnCallthrough extends BaseClassWithfn {
 
 let derivedClasscallthrough = new DerivedClassfnCallthrough();
 //derivedClasscallthrough('text')
+
+// Procteted
+
+class BaseClassProtected {
+    protected id: number;
+    private name: string = "";
+    constructor(id: number){
+        this.id = id;
+    }
+}
+class AcessProtected extends BaseClassProtected {
+    constructor(id: number){
+        super(id)
+        console.log(`base.id = ${this.id}`);
+       // console.log(`base.name = ${this.name}`);
+
+
+    }
+}
+
+let accessProtected = new AcessProtected(1);
+//accessProtected.id = 1;
+//accessProtected.name = "test";
+

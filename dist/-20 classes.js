@@ -239,3 +239,24 @@ var DerivedClassfnCallthrough = /** @class */ (function (_super) {
 }(BaseClassWithfn));
 var derivedClasscallthrough = new DerivedClassfnCallthrough();
 //derivedClasscallthrough('text')
+// Procteted
+var BaseClassProtected = /** @class */ (function () {
+    function BaseClassProtected(id) {
+        this.name = "";
+        this.id = id;
+    }
+    return BaseClassProtected;
+}());
+var AcessProtected = /** @class */ (function (_super) {
+    __extends(AcessProtected, _super);
+    function AcessProtected(id) {
+        var _this = _super.call(this, id) || this;
+        console.log("base.id = ".concat(_this.id));
+        return _this;
+        // console.log(`base.name = ${this.name}`);
+    }
+    return AcessProtected;
+}(BaseClassProtected));
+var accessProtected = new AcessProtected(1);
+//accessProtected.id = 1;
+//accessProtected.name = "test";
