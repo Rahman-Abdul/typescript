@@ -206,3 +206,24 @@ var DerivedClassWithCtor = /** @class */ (function (_super) {
     }
     return DerivedClassWithCtor;
 }(BaseClassWithctor));
+// Function Overiding
+var BaseClassWithfn = /** @class */ (function () {
+    function BaseClassWithfn() {
+    }
+    BaseClassWithfn.prototype.print = function (text) {
+        console.log("BaseClasswithfn.print() : ".concat(text));
+    };
+    return BaseClassWithfn;
+}());
+var DerivedClassOverrride = /** @class */ (function (_super) {
+    __extends(DerivedClassOverrride, _super);
+    function DerivedClassOverrride() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    DerivedClassOverrride.prototype.print = function (text) {
+        console.log("DerivedClassOverride.print(".concat(text, ")"));
+    };
+    return DerivedClassOverrride;
+}(BaseClassWithfn));
+var derivedClassOverride = new DerivedClassOverrride();
+derivedClassOverride.print('text');

@@ -215,3 +215,22 @@ class DerivedClassWithCtor extends BaseClassWithctor {
 
 }
 
+// Function Overiding
+
+class BaseClassWithfn {
+    print(text: string){
+        console.log(`BaseClasswithfn.print() : ${text}`);
+
+    }
+}
+
+class DerivedClassOverrride extends BaseClassWithfn {
+    print(text: string) {
+        console.log(`DerivedClassOverride.print(${text})`);
+
+    }
+}
+
+let derivedClassOverride = new DerivedClassOverrride()
+derivedClassOverride.print('text')
+
