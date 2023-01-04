@@ -266,3 +266,25 @@ let accessProtected = new AcessProtected(1);
 //accessProtected.id = 1;
 //accessProtected.name = "test";
 
+// Abstract Classes
+
+abstract class EmployeedBase {
+    public id: number;
+    public name: string;
+    constructor (id: number, name:string){
+        this.id = id;
+        this.name = name;
+    }
+}
+
+class OfficeWorker extends EmployeedBase {
+
+}
+
+class OfficeManager extends OfficeWorker {
+    public employees: OfficeWorker[] = [];
+}
+
+let joeBlogg = new OfficeWorker(1, "joe");
+let jillBlogg = new OfficeWorker(2, "jill");
+let jackManager = new OfficeManager(3, "jack");
