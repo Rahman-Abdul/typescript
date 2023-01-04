@@ -231,6 +231,14 @@ class DerivedClassOverrride extends BaseClassWithfn {
     }
 }
 
-let derivedClassOverride = new DerivedClassOverrride()
+let derivedClassOverride = new DerivedClassOverrride();
 derivedClassOverride.print('text')
 
+class DerivedClassfnCallthrough extends BaseClassWithfn {
+    print(text: string) {
+        super.print(`from DerivedClassfnCallthrough : ${text}`)
+    }
+}
+
+let derivedClasscallthrough = new DerivedClassfnCallthrough();
+//derivedClasscallthrough('text')

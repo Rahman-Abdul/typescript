@@ -227,3 +227,15 @@ var DerivedClassOverrride = /** @class */ (function (_super) {
 }(BaseClassWithfn));
 var derivedClassOverride = new DerivedClassOverrride();
 derivedClassOverride.print('text');
+var DerivedClassfnCallthrough = /** @class */ (function (_super) {
+    __extends(DerivedClassfnCallthrough, _super);
+    function DerivedClassfnCallthrough() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    DerivedClassfnCallthrough.prototype.print = function (text) {
+        _super.prototype.print.call(this, "from DerivedClassfnCallthrough : ".concat(text));
+    };
+    return DerivedClassfnCallthrough;
+}(BaseClassWithfn));
+var derivedClasscallthrough = new DerivedClassfnCallthrough();
+//derivedClasscallthrough('text')
