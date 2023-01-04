@@ -190,3 +190,19 @@ var MultippleInterfaces = /** @class */ (function () {
     }
     return MultippleInterfaces;
 }());
+// Super Funtion
+var BaseClassWithctor = /** @class */ (function () {
+    function BaseClassWithctor(id) {
+        this.id = id;
+    }
+    return BaseClassWithctor;
+}());
+var DerivedClassWithCtor = /** @class */ (function (_super) {
+    __extends(DerivedClassWithCtor, _super);
+    function DerivedClassWithCtor(id, name) {
+        var _this = _super.call(this, id) || this;
+        _this.name = name;
+        return _this;
+    }
+    return DerivedClassWithCtor;
+}(BaseClassWithctor));

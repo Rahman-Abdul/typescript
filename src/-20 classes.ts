@@ -198,5 +198,20 @@ class MultippleInterfaces implements IFirstInterface, ISecondInterface{
     name: string = "name string"
 }
 
+// Super Funtion
+class BaseClassWithctor {
+    private id: number;
+    constructor(id: number){
+        this.id = id;
+    }
+}
 
+class DerivedClassWithCtor extends BaseClassWithctor {
+    private name: string;
+    constructor(id: number, name: string){
+        super(id);
+        this.name = name;
+    }
+
+}
 
