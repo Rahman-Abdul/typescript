@@ -359,3 +359,5 @@ console.log("A instance of A :\n ".concat(new A() instanceof A));
 console.log("BfromA instanceof A :\n ".concat(new BfromA() instanceof A));
 console.log("BfronA instance of BfromA :\n ".concat(new BfromA instanceof BfromA));
 console.log("CfromA instance of BfromA :\n  ".concat(new BfromA() instanceof BfromA));
+console.log("DfromC instance of CfromA :\n".concat(new DfromC() instanceof CfromA));
+console.log("new DfromC instance of A :\n".concat(new DfromC() instanceof A));

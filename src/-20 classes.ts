@@ -341,6 +341,10 @@ console.log(`A instance of A :
   ${new BfromA() instanceof BfromA}`);
 
 
+console.log(`DfromC instance of CfromA :
+${new DfromC() instanceof CfromA}`);
+console.log(`new DfromC instance of A :
+${new DfromC() instanceof A}`);
 
 
 
