@@ -260,3 +260,71 @@ var AcessProtected = /** @class */ (function (_super) {
 var accessProtected = new AcessProtected(1);
 //accessProtected.id = 1;
 //accessProtected.name = "test";
+// Abstract Classes
+var EmployeedBase = /** @class */ (function () {
+    function EmployeedBase(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    return EmployeedBase;
+}());
+var OfficeWorker = /** @class */ (function (_super) {
+    __extends(OfficeWorker, _super);
+    function OfficeWorker() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return OfficeWorker;
+}(EmployeedBase));
+var OfficeManager = /** @class */ (function (_super) {
+    __extends(OfficeManager, _super);
+    function OfficeManager() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.employees = [];
+        return _this;
+    }
+    return OfficeManager;
+}(OfficeWorker));
+var joeBlogg = new OfficeWorker(1, "joe");
+var jillBlogg = new OfficeWorker(2, "jill");
+var jackManager = new OfficeManager(3, "jack");
+var EmployeeBase1 = /** @class */ (function () {
+    function EmployeeBase1() {
+    }
+    EmployeeBase1.prototype.contruct = function (id, name) {
+        this.id = id;
+        this.name = name;
+    };
+    return EmployeeBase1;
+}());
+var OfficeWorker1 = /** @class */ (function (_super) {
+    __extends(OfficeWorker1, _super);
+    function OfficeWorker1() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    OfficeWorker1.prototype.dowork = function () {
+        console.log("".concat(this.name, " : doing work"));
+    };
+    return OfficeWorker1;
+}(EmployeeBase1));
+var OfficeManager1 = /** @class */ (function (_super) {
+    __extends(OfficeManager1, _super);
+    function OfficeManager1() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.employees = [];
+        return _this;
+    }
+    OfficeManager1.prototype.manageEmployees = function () {
+        _super.prototype.dowork.call(this);
+        for (var _i = 0, _a = this.employees; _i < _a.length; _i++) {
+            var employee = _a[_i];
+            employee.dowork();
+        }
+    };
+    return OfficeManager1;
+}(OfficeWorker1));
+var jBlogg = new OfficeWorker1();
+var jiBlogg = new OfficeWorker1();
+var newManager = new OfficeManager1();
+newManager.employees.push();
+newManager.employees.push();
+newManager.manageEmployees();

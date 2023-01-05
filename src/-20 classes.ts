@@ -288,3 +288,38 @@ class OfficeManager extends OfficeWorker {
 let joeBlogg = new OfficeWorker(1, "joe");
 let jillBlogg = new OfficeWorker(2, "jill");
 let jackManager = new OfficeManager(3, "jack");
+
+abstract class EmployeeBase1{
+    public id:number;
+    public name: string;
+    abstract dowork(): void;
+    contruct(id: number, name: string){
+        this.id = id;
+        this.name = name;
+    }
+}
+
+class OfficeWorker1  extends EmployeeBase1 {
+    dowork(): void {
+        console.log(`${this.name} : doing work`);
+
+    }
+}
+
+class OfficeManager1 extends OfficeWorker1 {
+    public employees : OfficeWorker1[] = [];
+    manageEmployees(){
+        super.dowork();
+        for (let employee of this.employees){
+            employee.dowork();
+        }
+    }
+}
+
+let jBlogg = new OfficeWorker1();
+let jiBlogg = new OfficeWorker1();
+let newManager = new OfficeManager1()
+newManager.employees.push();
+newManager.employees.push();
+
+newManager.manageEmployees()
