@@ -328,3 +328,31 @@ var newManager = new OfficeManager1();
 newManager.employees.push();
 newManager.employees.push();
 newManager.manageEmployees();
+// Instanceof
+var A = /** @class */ (function () {
+    function A() {
+    }
+    return A;
+}());
+var BfromA = /** @class */ (function (_super) {
+    __extends(BfromA, _super);
+    function BfromA() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return BfromA;
+}(A));
+var CfromA = /** @class */ (function (_super) {
+    __extends(CfromA, _super);
+    function CfromA() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return CfromA;
+}(A));
+var DfromC = /** @class */ (function (_super) {
+    __extends(DfromC, _super);
+    function DfromC() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return DfromC;
+}(CfromA));
+console.log("A instance of A :\n ".concat(new A() instanceof A));

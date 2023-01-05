@@ -322,4 +322,16 @@ let newManager = new OfficeManager1()
 newManager.employees.push();
 newManager.employees.push();
 
-newManager.manageEmployees()
+newManager.manageEmployees();
+
+// Instanceof
+class  A {}
+class BfromA extends A {}
+class CfromA extends A {}
+class DfromC extends CfromA {}
+
+console.log(`A instance of A :
+ ${new A() instanceof A}`);
+
+
+
