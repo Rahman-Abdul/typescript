@@ -361,3 +361,23 @@ console.log("BfronA instance of BfromA :\n ".concat(new BfromA instanceof BfromA
 console.log("CfromA instance of BfromA :\n  ".concat(new BfromA() instanceof BfromA));
 console.log("DfromC instance of CfromA :\n".concat(new DfromC() instanceof CfromA));
 console.log("new DfromC instance of A :\n".concat(new DfromC() instanceof A));
+// Interface extending classes
+var BaseInterfaceClass = /** @class */ (function () {
+    function BaseInterfaceClass() {
+        this.id = 0;
+    }
+    BaseInterfaceClass.prototype.print = function () {
+        console.log("this.id : ".concat(this.id));
+    };
+    return BaseInterfaceClass;
+}());
+var ImplimentExt = /** @class */ (function (_super) {
+    __extends(ImplimentExt, _super);
+    function ImplimentExt() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ImplimentExt.prototype.setTd = function (id) {
+        this.id = id;
+    };
+    return ImplimentExt;
+}(BaseInterfaceClass));
