@@ -332,6 +332,12 @@ class DfromC extends CfromA {}
 
 console.log(`A instance of A :
  ${new A() instanceof A}`);
+ console.log(`BfromA instanceof A :
+ ${new BfromA() instanceof A}`);
+ console.log(`BfronA instance of BfromA :
+ ${new BfromA instanceof BfromA}`);
+
+
 
 
 
