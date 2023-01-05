@@ -337,6 +337,10 @@ console.log(`A instance of A :
  console.log(`BfronA instance of BfromA :
  ${new BfromA instanceof BfromA}`);
 
+ console.log(`CfromA instance of BfromA :
+  ${new BfromA() instanceof BfromA}`);
+
+
 
 
 
