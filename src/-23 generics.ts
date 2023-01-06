@@ -21,3 +21,16 @@ usingTwoTypes<number, string>(1, "text");
 usingTwoTypes(1, "text");
 usingTwoTypes<boolean, boolean>(true, false);
 usingTwoTypes("first", "second");
+
+// Constraining the type of T
+
+class Concatenator<T extends Array<string> | Array<number>>{
+    public concatenateArray(items: T): string {
+        let returnString = "";
+        for (let i = 0; i < items.length; i++){
+            returnString += i > 0 ? "," : "";
+            returnString += items[i].toString();
+        }
+        return returnString;
+    }
+}

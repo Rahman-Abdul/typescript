@@ -14,3 +14,17 @@ usingTwoTypes(1, "text");
 usingTwoTypes(1, "text");
 usingTwoTypes(true, false);
 usingTwoTypes("first", "second");
+// Constraining the type of T
+var Concatenator = /** @class */ (function () {
+    function Concatenator() {
+    }
+    Concatenator.prototype.concatenateArray = function (items) {
+        var returnString = "";
+        for (var i = 0; i < items.length; i++) {
+            returnString += i > 0 ? "," : "";
+            returnString += items[i].toString();
+        }
+        return returnString;
+    };
+    return Concatenator;
+}());
