@@ -11,4 +11,13 @@ printGenerics(true);
 printGenerics(()=>{});
 printGenerics({id: 1});
 
+// Multiple Generics
 
+function usingTwoTypes <A, B> (first: A, second: B){
+
+}
+
+usingTwoTypes<number, string>(1, "text");
+usingTwoTypes(1, "text");
+usingTwoTypes<boolean, boolean>(true, false);
+usingTwoTypes("first", "second");
