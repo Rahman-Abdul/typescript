@@ -28,3 +28,8 @@ var Concatenator = /** @class */ (function () {
     };
     return Concatenator;
 }());
+var concatenator = new Concatenator();
+var concatResult = concatenator.concatenateArray(["first", "second", "third"]);
+console.log("concatResult = ".concat(concatResult));
+concatResult = concatenator.concatenateArray([100, 2000, 3000]);
+console.log("concatResult = ".concat(concatResult));

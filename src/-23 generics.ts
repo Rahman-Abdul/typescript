@@ -34,3 +34,9 @@ class Concatenator<T extends Array<string> | Array<number>>{
         return returnString;
     }
 }
+
+let concatenator = new Concatenator();
+let concatResult = concatenator.concatenateArray(["first", "second", "third"])
+console.log(`concatResult = ${concatResult}`);
+concatResult = concatenator.concatenateArray([100, 2000, 3000])
+console.log(`concatResult = ${concatResult}`);
