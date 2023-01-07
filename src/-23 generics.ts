@@ -38,5 +38,27 @@ class Concatenator<T extends Array<string> | Array<number>>{
 let concatenator = new Concatenator();
 let concatResult = concatenator.concatenateArray(["first", "second", "third"])
 console.log(`concatResult = ${concatResult}`);
-concatResult = concatenator.concatenateArray([100, 2000, 3000])
+concatResult = concatenator.concatenateArray([100, 2000, 3000]);
 console.log(`concatResult = ${concatResult}`);
+// note this does not accept boolean
+//concatResult = concatenator.concatenateArray([true, true, true]);
+
+
+// Using the type T
+
+interface IPrintId {
+    id: number;
+    print(): void;
+}
+interface IPrintName {
+    name: string;
+    print(); void;
+}
+
+function useT <T extends IPrintId | IPrintName> (item: T): void {
+    item.print();
+   // item.id = 1;
+    //item.name = "test"
+
+}
+

@@ -33,3 +33,8 @@ var concatResult = concatenator.concatenateArray(["first", "second", "third"]);
 console.log("concatResult = ".concat(concatResult));
 concatResult = concatenator.concatenateArray([100, 2000, 3000]);
 console.log("concatResult = ".concat(concatResult));
+function useT(item) {
+    item.print();
+    // item.id = 1;
+    //item.name = "test"
+}
