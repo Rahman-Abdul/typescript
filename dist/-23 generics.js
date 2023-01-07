@@ -38,3 +38,17 @@ function useT(item) {
     // item.id = 1;
     //item.name = "test"
 }
+// Generics Constraints
+function printProperty(object, key) {
+    var propertyValue = object[key];
+    console.log('object[${key}] = ${propertyValue}');
+}
+var obj11 = {
+    id: 1,
+    name: "myname",
+    print: function () {
+        console.log("".concat(this.id));
+    }
+};
+printProperty(obj11, "id");
+printProperty(obj11, "name");
