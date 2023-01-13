@@ -80,18 +80,3 @@ let obj11  = {
 printProperty(obj11, "id");
 printProperty(obj11, "name");
 
-interface IPrintId {
-    id: number;
-    print(): void;
-}
-interface IPrintName {
-    name: string;
-    print(); void;
-}
-
-function useT <T extends IPrintId | IPrintName> (item: T): void {
-    item.print();
-   // item.id = 1;
-    //item.name = "test"
-
-}
