@@ -110,3 +110,9 @@ withliterals(3676);
 
 //withliterals("four");
 //withliterals(2);
+
+function myPersonlName(output: Allowednumbervalues | Allowedstringvalues){
+    console.log(`called with ${output}`)
+}
+
+myPersonlName("one");

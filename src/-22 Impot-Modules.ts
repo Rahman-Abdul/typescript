@@ -9,3 +9,4 @@ let Mod2 = new NewModule();
 Mod2.print()
 
 // new module
+

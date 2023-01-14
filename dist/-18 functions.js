@@ -76,3 +76,7 @@ withliterals("three");
 withliterals(3676);
 //withliterals("four");
 //withliterals(2);
+function myPersonlName(output) {
+    console.log("called with ".concat(output));
+}
+myPersonlName("one");
