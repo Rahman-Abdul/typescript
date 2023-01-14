@@ -6,3 +6,4 @@ var Mod1 = new _21_Modules_1.Module1();
 Mod1.print();
 var Mod2 = new _21_Modules_2.MyModule();
 Mod2.print();
+// new module

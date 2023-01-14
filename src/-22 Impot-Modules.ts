@@ -8,3 +8,4 @@ Mod1.print();
 let Mod2 = new NewModule();
 Mod2.print()
 
+// new module
