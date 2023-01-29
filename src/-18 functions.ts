@@ -94,6 +94,7 @@ add("first", "second");
 add(1, 2);
 //add(true, false);
 
+
 //Literals
 
 type Allowedstringvalues = "one" | "two" | "three";
@@ -101,15 +102,30 @@ type Allowednumbervalues = 1 | 20 | 3676;
 
 function withliterals(input: Allowedstringvalues | Allowednumbervalues){
     console.log(`callled with ${input}`);
-
 }
+
 
 withliterals("one");
 withliterals("three");
 withliterals(3676);
 
+
 //withliterals("four");
 //withliterals(2);
+
+type Allowedstringvalue = "one" | "two" | "three";
+type Allowednumbervalue = 1 | 20 | 3676;
+
+function withliterall(input: Allowedstringvalues | Allowednumbervalues){
+    console.log(`callled with ${input}`);
+}
+
+
+withliterall("one");
+withliterall("three");
+withliterall(3676);
+
+
 
 function myPersonlName(output: Allowednumbervalues | Allowedstringvalues){
     console.log(`called with ${output}`)

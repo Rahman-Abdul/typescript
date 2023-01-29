@@ -74,8 +74,12 @@ function withliterals(input) {
 withliterals("one");
 withliterals("three");
 withliterals(3676);
-//withliterals("four");
-//withliterals(2);
+function withliterall(input) {
+    console.log("callled with ".concat(input));
+}
+withliterall("one");
+withliterall("three");
+withliterall(3676);
 function myPersonlName(output) {
     console.log("called with ".concat(output));
 }
