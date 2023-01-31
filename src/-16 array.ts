@@ -8,6 +8,20 @@ let thirdArray = [...firstArray, ...secondArray]
 
 console.log(`third array = ${thirdArray}`);
 
+
+// multiple first array
+
+let numberOne = [1, 23, 6, 9];
+let numberTwo = ['hello', 'hi', 'how are you', undefined];
+let numerThree = [null, undefined, true, false];
+let lastArray = [...numberOne, ...numberTwo, ...numerThree]
+
+
+console.log(`the last array${lastArray}`);
+
+
+
+
 // spread oject with array
 
 let objArray1 = [

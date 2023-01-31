@@ -13,6 +13,12 @@ var firstArray = [1, 2, 3];
 var secondArray = [4, 5, 6];
 var thirdArray = __spreadArray(__spreadArray([], firstArray, true), secondArray, true);
 console.log("third array = ".concat(thirdArray));
+// multiple first array
+var numberOne = [1, 23, 6, 9];
+var numberTwo = ['hello', 'hi', 'how are you', undefined];
+var numerThree = [null, undefined, true, false];
+var lastArray = __spreadArray(__spreadArray(__spreadArray([], numberOne, true), numberTwo, true), numerThree, true);
+console.log("the last array".concat(lastArray));
 // spread oject with array
 var objArray1 = [
     {
