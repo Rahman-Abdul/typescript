@@ -52,3 +52,11 @@ var obj11 = {
 };
 printProperty(obj11, "id");
 printProperty(obj11, "name");
+var LogClass = /** @class */ (function () {
+    function LogClass() {
+    }
+    LogClass.prototype.logtoConsole = function (iPrintObj) {
+        iPrintObj.print();
+    };
+    return LogClass;
+}());

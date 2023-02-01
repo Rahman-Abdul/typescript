@@ -80,3 +80,17 @@ let obj11  = {
 printProperty(obj11, "id");
 printProperty(obj11, "name");
 
+interface IPrint{
+    print(): void;
+}
+
+interface ILoginInterface<T extends IPrint>{
+    logtoConsole(iPrintObj: T): void;
+}
+
+class LogClass<T extends Iprint> implements ILoginInterface<T>
+{
+  logtoConsole(iPrintObj: T): void {
+      iPrintObj.print();
+  }
+}
